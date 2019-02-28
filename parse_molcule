@@ -1,0 +1,21 @@
+def main(): 
+    molecule = "K4[ON(SO3)2]2"
+    
+    print(parse_atom(molecule))
+    
+def parse_atom(formula):
+    dict1 = {}
+    dict2 = {} 
+    dict3 = {} 
+    for i in formula: 
+        if formula[i].isupper(): 
+            if formula[i+1].islower(): 
+                dict1.update( {formula[i:i+1] : 1} ) 
+            else: 
+                dict1.update( {formula[i] : 1} ) 
+        if formula[i].isdigit(): 
+            if formula[i-1].isupper or formula[i-1].islower(): 
+                dict1.update( {formula[i] = formula[i]
+            else: 
+    
+main()
